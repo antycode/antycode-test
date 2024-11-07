@@ -1,0 +1,57 @@
+body[data-theme="dark"] {
+  .color {
+    &-primary {
+      --btn-color-bg-rgb: 107, 255, 255;
+      --btn-color-border-rgb: 107, 255, 255;
+      --btn-color-bg: rgba(var(--btn-color-bg-rgb), 0.4);
+      --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), 0.55);
+      --btn-color-border: rgba(var(--btn-color-border-rgb), 0.4);
+      --btn-color-text: #BEE3DF;
+    }
+    &-danger {
+      --btn-color-bg-rgb: 232, 114, 98;
+      --btn-color-border-rgb: 232, 114, 98;
+      --btn-color-bg: rgba(var(--btn-color-bg-rgb), 0.3);
+      --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), 0.4);
+      --btn-color-border: rgba(var(--btn-color-border-rgb), 0.3);
+      --btn-color-text: #EFC3C3;
+    }
+    &-orange {
+      --btn-color-bg-rgb: 230, 155, 113;
+      --btn-color-border-rgb: 230, 155, 113;
+      --btn-color-bg: rgba(var(--btn-color-bg-rgb), 0.4);
+      --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), 0.5);
+      --btn-color-border: rgba(var(--btn-color-border-rgb), 0.4);
+      --btn-color-text: #E59B71;
+    }
+  }
+}
+
+body[data-theme="light"] {
+  .color {
+    &-primary {
+      --btn-color-bg-rgb: var(--color-primary-rgb);
+      --btn-color-border-rgb: var(--color-primary-rgb);
+      --btn-color-bg: rgb(var(--btn-color-bg-rgb));
+      --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), 0.8);
+      --btn-color-border: rgba(var(--btn-color-border-rgb), 0.4);
+      --btn-color-text: var(--color-primary);
+    }
+    &-danger {
+      --btn-color-bg-rgb: 232, 114, 98;
+      --btn-color-border-rgb: 232, 114, 98;
+      --btn-color-bg: rgba(var(--btn-color-bg-rgb), 0.3);
+      --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), 0.8);
+      --btn-color-border: rgba(var(--btn-color-border-rgb), 0.3);
+      --btn-color-text: #E87262;
+    }
+    &-orange {
+      --btn-color-bg-rgb: 238, 128, 65;
+      --btn-color-border-rgb: 238, 128, 65;
+      --btn-color-bg: rgba(var(--btn-color-bg-rgb), 0.4);
+      --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), 0.8);
+      --btn-color-border: rgba(var(--btn-color-border-rgb), 0.4);
+      --btn-color-text: #EE8041;
+    }
+  }
+}

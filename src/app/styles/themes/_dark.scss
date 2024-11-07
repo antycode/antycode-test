@@ -1,0 +1,15 @@
+body[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-primary: #A1C6C2;
+  --color-primary-rgb: 161, 198, 194;
+  --color-secondary: #fff;
+  --color-secondary-rgb: 255, 255, 255;
+
+  --bg-body: #161616;
+
+  --icon-color-stroke: rgba(255, 255, 255, .3);
+  --icon-color-fill: rgba(121, 121, 122, .2);
+
+  --scrollbar-thumb: #343436;
+}

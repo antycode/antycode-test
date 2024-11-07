@@ -1,0 +1,4 @@
+{
+  "Field is required": "O campo é obrigatório",
+  "Value must be in the range: {{min}}–{{max}}": "O valor deve estar no intervalo: {{min}}–{{max}}"
+}

@@ -1,0 +1,248 @@
+.trashHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //padding: 25px 18px;
+  padding: 17px;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--acc-header-bg);
+}
+
+.actionsLeft {
+  display: flex;
+  gap: 40px;
+}
+
+.actionsRight {
+  display: flex;
+  gap: 15px;
+}
+
+[data-trash-profiles-active="Profiles"].btn {
+  color: #ffffff;
+  font-weight: 550;
+  border: none;
+}
+[data-trash-proxies-active="Proxies"].btn {
+  color: #ffffff;
+  font-weight: 550;
+  border: none;
+}
+[data-trash-accounts-active="Accounts"].btn {
+  color: #ffffff;
+  font-weight: 550;
+  border: none;
+}
+
+.addProxyText {
+  padding: 1px 0 0 0;
+}
+
+.addProxyTextWin {
+  padding: 0;
+  margin: -2px 0 0 0;
+}
+
+.btn {
+  color: #6E6E6E;
+  font-size: 16px;
+  border-bottom: 1px dashed #6E6E6E;
+}
+
+.btnActive {
+  color: #ffffff;
+  font-weight: 550;
+}
+
+.btnClear {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  background: rgba(232, 114, 98, 0.60);
+  padding: 0 11px;
+
+  &:hover {
+    background: rgba(232, 114, 98, 0.75);
+  }
+}
+
+.btnClearText {
+  font-size: 12px;
+  font-weight: 550;
+  padding-top: 2px;
+}
+
+.modalWindowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px 6px 0 0;
+  background: rgba(217, 217, 217, 0.10);
+  padding: 22px;
+}
+
+.modalWindowTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.closeBtn {
+  cursor: pointer;
+}
+
+.modalHeaderTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.modalHeaderTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  margin-top: 6px;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px 110px;
+}
+
+.modalContentImportCookies {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px;
+}
+
+.modalChangeTags {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px;
+  width: 780px;
+}
+
+.warningTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.warningText1 {
+  color: #ffffff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 20px;
+}
+
+.warningText2 {
+  color: rgba(255, 255, 255, 0.40);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.approveContent {
+  display: flex;
+  gap: 10px;
+}
+
+.approveContentModalWindow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.approveContentModalWindowProxies {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 60px;
+}
+
+.btnCancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding-top: 3px;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #3B3B3B;
+  }
+}
+
+.btnCancelModalWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding-top: 3px;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #3B3B3B;
+  }
+}
+
+.btnApproveModalWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 3px;
+  background: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.btnDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 3px;
+  background: rgba(124, 76, 74, 0.60);
+
+  &:hover {
+    background: rgba(124, 76, 74, 0.75);
+  }
+}

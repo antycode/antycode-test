@@ -1,0 +1,34 @@
+body[data-theme=dark] .sidebar-tabs {
+  --drawer-sidebar-bg: #242424;
+  --drawer-sidebar-item-bg: #B2B3B9;
+}
+
+body[data-theme=light] .sidebar-tabs {
+  --drawer-sidebar-bg: #F1F1F1;
+  --drawer-sidebar-item-bg: rgba(84, 84, 84, 0.5);
+}
+
+.sidebar-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  min-width: 210px;
+  background-color: var(--drawer-sidebar-bg);
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 24px;
+  height: 40px;
+  font-size: 16px;
+  color: var(--drawer-sidebar-item-bg);
+  background-color: transparent;
+  transition: background-color ease 200ms, color ease 200ms;
+
+  &--active {
+    background-color: var(--drawer-bg-body);
+    font-weight: 500;
+    color: var(--color-secondary);
+  }
+}

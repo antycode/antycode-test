@@ -1,0 +1,30 @@
+@import "/src/shared/styles/mixins.global.scss";
+
+body[data-theme="dark"] {
+    --drawer-form-header-bg: #000000;
+}
+
+body[data-theme="light"] {
+    --drawer-form-header-bg: #f1f1f1;
+}
+
+.acc-creation-content {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.proxyMain {
+    @include drawerScrollbar;
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.proxyHeader {
+    display: flex;
+    min-height: 91px;
+    background: var(--drawer-form-header-bg);
+}

@@ -1,0 +1,37 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.accountInfoContent {
+  display: flex;
+  gap: 80px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.text {
+  color: #959595;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.text2 {
+  color: #ffffff;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 0 24px ;
+  flex-shrink: 0;
+  margin-top: auto;
+  background-color: #313133;
+}

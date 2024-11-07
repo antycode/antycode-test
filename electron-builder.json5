@@ -1,0 +1,93 @@
+/**
+ * @see https://www.electron.build/configuration/configuration
+ */
+{
+  appId: 'com.anty-code.browser',
+  asar: true,
+  directories: {
+    output: 'release/${version}',
+  },
+  files: [
+    'dist-electron',
+    'dist',
+    {
+      from: '../dist',
+      filter: [
+        '**/*'
+      ],
+    },
+  ],
+  extraFiles: [
+    {
+      from: 'resources/mac',
+      to: 'Resources/mac',
+      filter: [
+        '**/*'
+      ],
+    },
+    {
+      from: 'resources/win',
+      to: 'Resources/win',
+      filter: [
+        '**/*'
+      ],
+    },
+    {
+      from: 'resources/linux',
+      to: 'Resources/linux',
+      filter: [
+        '**/*'
+      ],
+    },
+    {
+      from: 'resources/profileTemplate',
+      to: 'Resources/profileTemplate',
+      filter: [
+        '**/*'
+      ],
+    },
+    {
+      from: 'certs.json',
+      to: 'Resources/certs.json',
+      filter: [
+        '**/*'
+      ],
+    }
+  ],
+  mac: {
+    icon: 'public/favicon.icns',
+    artifactName: '${productName}_${version}.${ext}',
+    target: {
+      target: 'dmg',
+      arch: [
+        'x64'
+      ],
+    },
+  },
+  win: {
+    icon: 'public/favicon.ico',
+    target: [
+      {
+        target: 'nsis',
+        arch: [
+          'x64'
+        ],
+      },
+    ],
+    artifactName: '${productName}_${version}.${ext}',
+  },
+  linux: {
+    icon: 'public/favicon.png',
+  },
+  nsis: {
+    oneClick: false,
+    perMachine: false,
+    allowToChangeInstallationDirectory: true,
+    deleteAppDataOnUninstall: false,
+  },
+  publish: {
+    provider: 'generic',
+    channel: 'latest',
+    url: 'https://github.com/electron-vite/electron-vite-react/releases/download/v0.9.9/',
+  },
+}

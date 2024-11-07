@@ -1,0 +1,43 @@
+.acc-list-status {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+}
+
+.in-progress::before {
+  background-color: rgba(255, 193, 7, 0.7);
+}
+
+.error::before {
+  background-color: rgba(220, 82, 82, 0.6);
+}
+
+.not-activated::before {
+  height: 12px;
+  width: 12px;
+  flex-shrink: 0;
+  border: 1px solid #9E9E9E;
+  background-color: transparent;
+}
+
+.activation-pending::before {
+  background-color: rgba(60, 106, 160, 0.6);
+}
+
+.active::before {
+  background-color: rgba(82, 220, 154, 0.6);
+}
+
+.unknown::before {
+  background-color: #eeeeee;
+}

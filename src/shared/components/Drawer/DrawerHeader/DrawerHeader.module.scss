@@ -1,0 +1,12 @@
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 91px;
+  min-height: 91px;
+  padding: 0 28px;
+  border-bottom: 1px solid var(--drawer-border-color);
+  background: #86bcc4;
+  background-color: var(--drawer-bg-header);
+  z-index: 10;
+}

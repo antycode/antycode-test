@@ -1,0 +1,10 @@
+.drawerFooter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 716px;
+    background-color: var(--drawer-bg-footer);
+    padding: 0 30px;
+    z-index: 10;
+}

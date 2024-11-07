@@ -1,0 +1,223 @@
+@import '/src/shared/styles/mixins.global.scss';
+
+body[data-theme=dark] .form {
+  --drawer-form-footer-bg: #282828;
+  --drawer-form-btn-bg-rgb: 161, 198, 194;
+  --drawer-form-btn-bg: rgba(var(--drawer-form-btn-bg-rgb), 0.6);
+  --drawer-form-btn-bg-hover: rgba(var(--drawer-form-btn-bg-rgb), 0.7);
+}
+
+body[data-theme=light] .form {
+  --drawer-form-footer-bg: #FFF;
+  --drawer-form-btn-bg-rgb: 23, 203, 203;
+  --drawer-form-btn-bg: rgba(var(--drawer-form-btn-bg-rgb), 0.8);
+  --drawer-form-btn-bg-hover: rgba(var(--drawer-form-btn-bg-rgb), 1);
+}
+
+.form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-pages {
+  @include scrollbar;
+
+  flex-grow: 1;
+  padding: 30px 10px 30px 27px;
+  //overflow-y: scroll;
+
+  //overflow-y: auto;
+  //max-height: calc(100% - 50px);
+  //scrollbar-width: thin;
+  //scrollbar-color: var(--your-scrollbar-thumb-color) var(--your-scrollbar-track-color);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0 40px;
+  height: 135px;
+  background-color: var(--drawer-form-footer-bg);
+}
+
+.form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+
+.fieldWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.servicesWrapper{
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+
+.inputClass{
+  border-color: rgba(107, 255, 255, 0.4) !important;
+}
+
+.contollerWidth{
+  width: 445px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 6px;
+  width: 230px;
+  min-height: 40px;
+  font-weight: 550;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  white-space: pre-line;
+  color: var(--color-secondary);
+}
+
+.controls {
+  display: flex;
+  width: 445px;
+  gap: 15px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 58px;
+  min-width: 260px;
+  border-radius: 3px;
+  background-color: var(--drawer-form-btn-bg);
+  font-size: 18px;
+  color: #FFF;
+
+  &:hover {
+    background-color: var(--drawer-form-btn-bg-hover);
+  }
+}
+
+.mainTitle {
+  display: flex;
+  align-items: center;
+  padding-left: 26px;
+  width: 100%;
+  height: 63px;
+  border-radius: 6px;
+  background: rgba(107, 255, 255, 0.40);
+
+  font-size: 19px;
+  font-weight: 550;
+  line-height: normal;
+}
+
+.autoregInput {
+  border: 1px solid rgba(107, 255, 255, 0.40) !important;
+}
+
+input[name='smsTimeout'] {
+  border: 1px solid rgba(107, 255, 255, 0.40);
+}
+
+.autoregCreationFooter {
+  display: flex;
+  align-items: center;
+  background: #282828;
+  height: 66px;
+  width: 100%;
+  padding: 0 27px;
+}
+
+.autoregCreationFooterContent {
+  width: 50%;
+  display: flex;
+  gap: 15px;
+}
+
+.btnCancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.80);
+  border: 1px solid rgba(217, 217, 217, 0.20);
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #3B3B3B;
+  }
+}
+
+.btnRun{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.80);
+  border-radius: 6px;
+  background: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.btnText {
+  padding: 4px 0 0 0;
+}
+
+@media (max-width: 1550px) {
+  .autoregCreationFooter {
+    height: 66px;
+  }
+}
+
+@media (max-width: 1480px) {
+  .autoregCreationFooter {
+    height: 67px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .autoregCreationFooter {
+    height: 66px;
+  }
+}
+
+@media (max-width: 1415px) {
+  .autoregCreationFooter {
+    height: 66px;
+  }
+}
+
+@media (max-width: 1375px) {
+  .autoregCreationFooter {
+    height: 65px;
+  }
+}

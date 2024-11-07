@@ -1,0 +1,41 @@
+@import './reset';
+@import './fonts';
+@import './global';
+@import './themes/light';
+@import './themes/dark';
+
+:root {
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-family-main);
+  background-color: var(--bg-body);
+  color: var(--color-secondary);
+}
+
+.app {
+  display: block;
+  //flex-direction: column;
+  //height: calc(100vh - var(--title-bar-height));
+  height: 100vh;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

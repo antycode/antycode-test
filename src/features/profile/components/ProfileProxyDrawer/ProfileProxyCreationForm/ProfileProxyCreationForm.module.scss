@@ -1,0 +1,485 @@
+@import '/src/shared/styles/mixins.global.scss';
+body[data-theme='dark'] {
+  --drawer-form-bg: #0a0a0a;
+  --drawer-form-btn-bg-rgb: 161, 198, 194;
+  --drawer-form-btn-bg: rgba(var(--drawer-form-btn-bg-rgb), 0.6);
+  --drawer-form-btn-bg-hover: rgba(var(--drawer-form-btn-bg-rgb), 0.7);
+  --drawer-form-btn-text-bg: #ffffff;
+  --drawer-form-btn-text-color: #848484;
+  --drawer-form-btn-text-color-active: #ffffff;
+  --drawer-form-error: #7c4c4a;
+  --drawer-form-info: #e59b71;
+  --drawer-form-success: #17cbcb;
+}
+
+body[data-theme='light'] {
+  --drawer-form-bg: #ffffff;
+  --drawer-form-btn-bg-rgb: 23, 203, 203;
+  --drawer-form-btn-bg: rgba(var(--drawer-form-btn-bg-rgb), 0.8);
+  --drawer-form-btn-bg-hover: rgba(var(--drawer-form-btn-bg-rgb), 1);
+  --drawer-form-btn-text-bg: #989898;
+  --drawer-form-btn-text-color: #a9a9a9;
+  --drawer-form-btn-text-color-active: #545454;
+  --drawer-form-error: #f58d8d;
+  --drawer-form-info: #e59b71;
+  --drawer-form-success: #17cbcb;
+}
+
+.formWrapper {
+  transition: all 0.3s ease;
+}
+
+[data-proxy-active='true'].formWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: content;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.btnWrapperInfo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  & button {
+    text-align: center;
+    height: 34px;
+    width: 100px;
+    font-size: 12px;
+    font-weight: 400;
+    background: rgba(107, 255, 255, 0.4);
+    border-radius: 6px;
+    &:hover {
+      background: rgba(107, 255, 255, 0.55);
+    }
+  }
+}
+
+.proxyFormHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 91px;
+  padding: 0 27px 0 15px;
+  background: #161616;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.addProxySpanHeader {
+  border-bottom: 1px solid #ffffff;
+  padding: 46px 0;
+  margin-top: -17px;
+}
+
+.closeBtn {
+  margin-top: -17px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background: #161616;
+}
+
+.form-pages {
+  //min-height: 700px;
+  flex-grow: 1;
+  //padding: 61px 40px 0 65px;
+}
+
+.formPage {
+  display: flex;
+  gap: 7px;
+  padding: 20px 0 3px 0;
+}
+
+.addProxyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  border-radius: 6px;
+  background: rgba(107, 255, 255, 0.1);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(107, 255, 255, 0.4);
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.addProxyLeftSide {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid rgba(107, 255, 255, 0.4);
+}
+
+.formatsList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 0;
+  list-style-type: none;
+
+  li {
+    &:before {
+      content: '\2022';
+      position: relative;
+      font-size: 20px;
+      margin-right: 10px;
+      top: 2px;
+      left: 4px;
+    }
+  }
+}
+
+.formatsRules {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 0;
+  list-style-type: none;
+
+  li {
+    list-style: none;
+  }
+}
+
+.addProxyRightSide {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgba(107, 255, 255, 0.4);
+}
+
+.inputProxy {
+  @include textareaScrollbar;
+  appearance: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 10px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  resize: none;
+  border: none;
+  background: #161616;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.buttonAddProxyWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 48px;
+}
+
+.buttonAddProxy {
+  text-align: center;
+  height: 34px;
+  width: 146px;
+  font-size: 12px;
+  font-weight: 400;
+  background: rgba(107, 255, 255, 0.4);
+  border-radius: 6px;
+  margin: 20px;
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.field {
+  display: flex;
+}
+
+.fieldBottom {
+  margin-top: 27px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  transform: translateY(-2px);
+  padding: 0 10px 0 6px;
+  width: 171px;
+  min-height: 40px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  white-space: pre-line;
+  color: var(--color-secondary);
+}
+
+.controls {
+  display: flex;
+  width: 445px;
+  gap: 39px;
+}
+
+.wrapperOptions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.optionsForm {
+  padding-top: 12px;
+  min-height: auto;
+}
+
+.wrapperProxyForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--drawer-form-btn-text-color);
+  background-color: var(--drawer-form-bg);
+  margin-bottom: 4px;
+}
+
+.roundActive {
+  border: 2px solid var(--drawer-form-btn-text-color-active);
+}
+
+.roundText {
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.13px;
+  color: var(--drawer-form-btn-text-color);
+}
+
+.roundTextActive {
+  font-weight: 700;
+  color: var(--drawer-form-btn-text-color-active);
+}
+
+.wrapperRound {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.inputProxyFormatCustomWrapper {
+  display: flex;
+  gap: 20px;
+  height: 42px;
+}
+
+.inputProxyCustom {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  border: 1px solid rgba(107, 255, 255, 0.4);
+  width: 100%;
+  padding: 0 16px;
+}
+
+.buttonAddProxyLeft {
+  text-align: center;
+  height: 34px;
+  width: 146px;
+  font-size: 12px;
+  font-weight: 400;
+  background: rgba(107, 255, 255, 0.4);
+  border-radius: 6px;
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.roundActive {
+  background: rgba(107, 255, 255, 0.1);
+  .roundText {
+    color: var(--drawer-form-btn-text-color-active);
+  }
+}
+
+.wrapperRender {
+  display: flex;
+  align-items: center;
+}
+
+.wrapperProxyBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  margin-top: 20px;
+  padding-bottom: 12px;
+  .wrapperProxyLeft {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .proxyLeft {
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .proxyText {
+        padding-left: 7px;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.1px;
+        text-transform: uppercase;
+        color: var(--drawer-form-btn-text-color);
+      }
+      .proxyArrows path {
+        fill: var(--drawer-form-btn-text-color);
+      }
+    }
+    .proxyLine {
+      padding-top: 4.5px;
+      width: 150px;
+      border-bottom: 1px dashed var(--drawer-form-btn-text-color);
+    }
+  }
+  .errorButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 82px;
+    padding: 10px 10px;
+    height: 29px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 1px solid var(--drawer-form-error);
+    .errorText {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+      color: var(--drawer-form-error);
+    }
+  }
+  .infoButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 82px;
+    padding: 10px 10px;
+    height: 29px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 1px solid var(--drawer-form-info);
+    .infoText {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+      color: var(--drawer-form-info);
+    }
+  }
+  .successButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 82px;
+    padding: 10px 10px;
+    height: 29px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 1px solid var(--drawer-form-success);
+    .successText {
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.1px;
+      text-transform: uppercase;
+      color: var(--drawer-form-success);
+    }
+  }
+}
+
+.btn,
+.btnSave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 47px;
+  min-width: 296px;
+  border-radius: 3px;
+  background-color: var(--drawer-form-btn-bg);
+  font-size: 18px;
+  color: #fff;
+  margin-left: 20px;
+
+  &:hover {
+    background-color: var(--drawer-form-btn-bg-hover);
+  }
+}
+
+.wrapperBtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+
+.wrapperProxyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.chooseProxySelect {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wrapperProtocols {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.wrapperRound {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(107, 255, 255, 0.4);
+  border-radius: 6px;
+  height: 42px;
+  width: 100%;
+}
+.rowInput {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

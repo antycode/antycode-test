@@ -1,0 +1,572 @@
+@import '/src/shared/styles/mixins.global.scss';
+[data-folders-mode=false].folders {
+  width: 236px;
+  opacity: 1;
+  padding: 31px 20px 0 20px;
+  border-right: 1px solid #2C2E30;
+}
+
+.infoBar{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 90px;
+  width: calc(100% - 90px);
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 17px 13px 0 15px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.footer {
+  height: 66px;
+  flex-shrink: 0;
+  background: rgba(217, 217, 217, 0.1);
+}
+
+.profilesPage {
+  display: flex;
+  height: 100%;
+}
+
+.folders {
+  width: 0px;
+  opacity: 0;
+  padding: 31px 0 0 0;
+  transition: width 200ms ease, opacity 200ms ease, padding 200ms ease;
+  z-index: 1;
+}
+
+.headerTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.foldersHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  //border-bottom: 2px solid #2A2A2A;
+}
+
+.foldersHeaderRight {
+  display: flex;
+  gap: 10px;
+}
+
+.headerFolderItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  background: #2C2E30;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background: #3B3B3B;
+  }
+}
+
+.allProfiles {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 2px solid #2A2A2A;
+}
+
+.allProfilesFolder {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  padding: 6px 10px 5px 10px;
+  border-radius: 6px;
+  width: 100%;
+
+  &:hover {
+    background: #2A2A2A;
+  }
+}
+
+.folderItemsWrapper {
+  padding: 30px 0;
+  height: 80%;
+}
+
+.folderItems {
+  @include scrollbar;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 50%;
+  overflow-y: auto;
+}
+
+.folderTitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: #C0C0C0;
+}
+
+.activeSelectedFolder {
+  background: #2A2A2A;
+}
+
+.folderItem {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 6px 10px 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 400;
+
+  &:hover {
+    background: #2A2A2A;
+  }
+}
+
+.folderItemLeft {
+  display: flex;
+  gap: 15px;
+}
+
+.modalWindowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px 6px 0 0;
+  background: rgba(217, 217, 217, 0.10);
+  padding: 22px;
+}
+
+.modalWindowTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.closeBtn {
+  cursor: pointer;
+}
+
+.modalDeleteHeaderTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.modalDeleteTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  margin-top: 6px;
+}
+
+.addFolderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 205px;
+  border-radius: 30px;
+  border: 1px solid rgba(95, 94, 94, 0.30);
+  background: #2A2A2A;
+  padding: 0 15px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.inputFolderName {
+  width: 100%;
+  border: none;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  padding: 10px 0;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.addFolderData {
+  @include scrollbar;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.removeFolderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 15px;
+  background: #2A2A2A;
+
+  &:hover {
+    background: #3B3B3B;
+  }
+}
+
+.folderContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.noFoldersWrapper {
+  text-align: center;
+  width: 429px;
+}
+
+.folderWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 429px;
+  padding: 15px;
+  cursor: pointer;
+  background: #2A2A2A;
+  border-radius: 50px;
+
+  &:hover {
+    background: #3B3B3B;
+  }
+}
+
+.folderColorTitle {
+  display: flex;
+  gap: 15px;
+}
+
+.addFolderDataItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transferText {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.transferItem {
+  display: flex;
+  align-items: center;
+  gap: 182px;
+  justify-content: space-between;
+  border-bottom: 1px solid #393939;
+  padding: 37px 0;
+}
+
+.dropdownList {
+  @include dropdownScrollbar;
+  position: absolute;
+  width: 205px;
+  max-height: 110px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: #2A2A2A;
+  border: 1px solid #393939;
+  border-radius: 0 0 6px 6px;
+}
+
+.dropdownItem {
+  cursor: pointer;
+  padding: 10px 20px;
+
+  &:hover {
+    background: #3B3B3B;
+  }
+}
+
+.colorsList {
+  display: flex;
+}
+
+.dropdownColorItem {
+  display: flex;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all .1s ease ;
+  border: 4px solid transparent;
+  &:hover {
+    border: 4px solid #3B3B3B;
+  }
+}
+
+//.dropdownColorItem {
+//  display: flex;
+//  cursor: pointer;
+//  padding: 10px 20px;
+//
+//  &:hover {
+//    background: #3B3B3B;
+//  }
+//}
+
+.color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorList{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 32px;
+}
+
+.secondColor {
+  width: 50%;
+  height: 14px;
+  opacity: 0.6;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.active {
+  background: #f8f8f9;
+}
+
+.activeColor{
+  border: 4px solid #3B3B3B;
+}
+
+.selectedColor {
+  display: flex;
+  width: 85%;
+}
+
+.firstColor {
+  width: 50%;
+  height: 14px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.secondColor {
+  width: 50%;
+  height: 14px;
+  opacity: 0.6;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.active {
+  background: #3B3B3B;
+}
+
+.selectedIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.errorValidation {
+  display: flex;
+  justify-content: flex-end;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 550;
+  color: red;
+}
+
+.iconWithTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdownActive {
+  border-bottom: 0 !important;
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.dropdownMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 205px;
+  height: 34px;
+  border-radius: 30px;
+  padding: 1px 17px 0 17px;
+  border: 1px solid rgba(95, 94, 94, 0.30);
+  background: #2A2A2A;
+}
+
+.approveDeleteContent {
+  display: flex;
+  gap: 10px;
+}
+
+.btnApprove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 2px;
+  background: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.btnAccept {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 2px;
+  background: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.btnCancelDeleteToken {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding-top: 2px;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #3B3B3B;
+  }
+}
+
+.btnDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 3px;
+  background: rgba(124, 76, 74, 0.60);
+
+  &:hover {
+    background: rgba(124, 76, 74, 0.75);
+  }
+}
+
+.modalWindowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px 6px 0 0;
+  background: rgba(217, 217, 217, 0.10);
+  padding: 22px;
+}
+
+.modalWindowTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.modalHeaderTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.modalHeaderTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  margin-top: 6px;
+}
+
+.tariffErrorContent {
+  font-size: 17px;
+  font-weight: 550;
+  text-align: center;
+  padding: 30px;
+}
+
+.approveContentModalWindow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btnApproveModalWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 3px;
+  background: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}

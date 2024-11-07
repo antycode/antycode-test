@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Geometria Narrow';
+  src: local('Geometria Narrow Bold'), local('Geometria-NarrowBold'),
+      url('/src/shared/assets/fonts/Geometria/Geometria-NarrowBold.woff2') format('woff2'),
+      url('/src/shared/assets/fonts/Geometria/Geometria-NarrowBold.woff') format('woff'),
+      url('/src/shared/assets/fonts/Geometria/Geometria-NarrowBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// FIXME 
+@font-face {
+  font-family: 'Geom';
+  src: local('Geom'),
+      url('/src/shared/assets/fonts/Geom/Geometria-Narrow-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: local('HelveticaNeueCyr-Medium'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.woff') format('woff'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: local('HelveticaNeueCyr-MediumItalic'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-MediumItalic.woff') format('woff'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-MediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: local('HelveticaNeueCyr-Roman'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.woff') format('woff'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: local('HelveticaNeueCyr-Bold'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.woff') format('woff'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueCyr';
+	src: local('HelveticaNeueCyr-Light'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.woff') format('woff'),
+		url('/src/shared/assets/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+// ====================
+// Gilroy
+// ====================
+
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Bold'), local('Gilroy-Bold'),
+		url('/src/shared/assets/fonts/Gilroy/Gilroy-Bold.woff') format('woff'),
+		url('/src/shared/assets/fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Light'), local('Gilroy-Light'),
+		url('/src/shared/assets/fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+		url('/src/shared/assets/fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Medium'), local('Gilroy-Medium'),
+		url('/src/shared/assets/fonts/Gilroy/Gilroy-Medium.woff') format('woff'),
+		url('/src/shared/assets/fonts/Gilroy/Gilroy-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Regular'), local('Gilroy-Regular'),
+		url('/src/shared/assets/fonts/Gilroy/Gilroy-Regular.woff') format('woff'),
+		url('/src/shared/assets/fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

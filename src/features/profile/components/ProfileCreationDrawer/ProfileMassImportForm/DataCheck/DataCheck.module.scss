@@ -1,0 +1,68 @@
+@import '/src/shared/styles/mixins.global.scss';
+.col {
+  &-name {
+    font-weight: 500;
+    width: 300px;
+    flex: 300 0 auto;
+  }
+  &-name-child {
+    justify-content: center;
+    font-weight: 500;
+    width: 300px;
+    flex: 300 0 auto;
+  }
+  &-cookie {
+    font-weight: 500;
+    width: 90px;
+    flex: 90 0 auto;
+  }
+  &-cookie-child {
+    justify-content: center;
+    font-weight: 500;
+    width: 90px;
+    flex: 90 0 auto;
+  }
+  &-proxy-type {
+    font-weight: 500;
+    width: 130px;
+    flex: 130 0 auto;
+  }
+  &-proxy-type-child {
+    justify-content: center;
+    font-weight: 500;
+    width: 130px;
+    flex: 130 0 auto;
+  }
+  &-proxy {
+    font-weight: 500;
+    width: 400px;
+    flex: 400 0 auto;
+  }
+  &-proxy-child {
+    justify-content: center;
+    font-weight: 500;
+    width: 400px;
+    flex: 400 0 auto;
+  }
+  &-useragent {
+    font-weight: 500;
+    width: 300px;
+    flex: 300 0 auto;
+  }
+  &-useragent-child {
+    justify-content: center;
+    font-weight: 500;
+    width: 300px;
+    flex: 300 0 auto;
+  }
+  &-note {
+    justify-content: center;
+    font-weight: 500;
+    width: 90px;
+    flex: 90 0 auto;
+  }
+}
+
+.tableMainWrapper {
+  max-height: 600px;
+}

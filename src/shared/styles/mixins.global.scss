@@ -1,0 +1,224 @@
+body[data-theme="dark"] {
+  --color-scrollbar-thumb: #ffffff;
+  --select-scroll-track-clr: #0a0a0a;
+}
+
+body[data-theme="light"] {
+  --color-scrollbar-thumb: #545454;
+  --select-scroll-track-clr: #ffffff;
+}
+
+@mixin sidebarTransition($prop, $func: linear) {
+  transition: #{$prop} $func var(--sidebar-transition-duration);
+  // will-change: $prop;
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    min-height: 40px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track {
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    border-radius: 8px;
+  }
+}
+
+@mixin tableScrollbar {
+  &::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: var(--bg-body);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    min-height: 40px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-top: 52px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track {
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    border-radius: 8px;
+  }
+}
+
+@mixin drawerScrollbar {
+  &::-webkit-scrollbar {
+    background-color: var(--select-scroll-track-clr);
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--select-scroll-track-clr);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-thumb);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    border: 0px solid var(--select-scroll-track-clr);
+    transition: all linear 1000ms;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+
+@mixin textareaScrollbar {
+  &::-webkit-scrollbar {
+    background-color: var(--select-scroll-track-clr);
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #161616;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-thumb);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    border: 0px solid var(--select-scroll-track-clr);
+    transition: all linear 1000ms;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+
+@mixin teamsScrollbar {
+  &::-webkit-scrollbar {
+    background-color: var(--select-scroll-track-clr);
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #474747;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-thumb);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    border: 0px solid var(--select-scroll-track-clr);
+    transition: all linear 1000ms;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+
+@mixin dropdownScrollbar {
+  &::-webkit-scrollbar {
+    background-color: var(--select-scroll-track-clr);
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #2A2A2A;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-thumb);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    border: 0px solid var(--select-scroll-track-clr);
+    transition: all linear 1000ms;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+
+@mixin selectItemsScrollbar {
+  &::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: var(--bg-body);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    min-height: 40px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #19191A;
+  }
+
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track {
+    border: 4px solid #19191A;
+    background-clip: padding-box;
+    border-radius: 8px;
+  }
+}
+
+@mixin tableMainDataCheck {
+  &::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: var(--bg-body);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar-thumb);
+    min-height: 40px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-top: 52px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track {
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    border-radius: 8px;
+  }
+}

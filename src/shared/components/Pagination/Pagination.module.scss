@@ -1,0 +1,79 @@
+body[data-theme=dark] .pagination {
+  --pagination-bg: #161616;
+  --pagination-btn-bg: #1D1D1F;
+  --pagination-btn-bg-hover: rgba(190, 227, 223, 0.1);
+  --pagination-btn-bg-active: rgba(190, 227, 223, 0.16);
+  --pagination-btn-text-active: #BEE3DF;
+  --pagination-btn-text-disabled: rgba(255, 255, 255, 0.25);
+}
+
+body[data-theme=light] .pagination {
+  --pagination-bg: #F1F1F1;
+  --pagination-btn-bg: #FBFBFB;
+  --pagination-btn-bg-hover: rgba(23, 203, 203, 0.1);
+  --pagination-btn-bg-active: rgba(23, 203, 203, 0.16);
+  --pagination-btn-text-active: #545454;
+  --pagination-btn-text-disabled: rgba(84, 84, 84, 0.4);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  height: 28px;
+  user-select: none;
+  cursor: pointer;
+
+  &--loading {
+    cursor: progress;
+  }
+}
+
+.arrowRotateToLeft {
+  transform: rotate(180deg);
+}
+
+.arrowButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 45px;
+  background: #1D1D1F;
+}
+
+.arrowButtonLeft {
+  border-radius: 10px 0 0 10px;
+}
+
+.arrowButtonRight {
+  border-radius: 0 10px 10px 0;
+}
+
+.ellipsis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 37px;
+  background: #1D1D1F;
+}
+
+.pageNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 37px;
+  background: #1D1D1F;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.arrowGrey {
+  color: #fff;
+}

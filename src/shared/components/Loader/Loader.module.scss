@@ -1,0 +1,33 @@
+[data-mini-sidebar=true].loaderWrapper {
+  width: calc(100% - 90px);
+}
+
+.loaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: calc(100% - 236px);
+  transition: width 0.2s ease;
+  z-index: 14;
+  background: rgba(30, 30, 32, 0.8);
+}
+
+.loaderWrapperAddUserPopup {
+  height: 331px !important;
+  width: 100% !important;
+  margin-top: 85px;
+}
+
+.loader {
+  color: var(--color-secondary);
+
+  &--light {
+    color: #fff;
+  }
+
+  &--dark {
+    color: #545454;
+  }
+}

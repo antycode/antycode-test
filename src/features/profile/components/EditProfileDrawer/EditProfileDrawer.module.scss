@@ -1,0 +1,28 @@
+@import "/src/shared/styles/mixins.global.scss";
+
+body[data-theme="dark"] {
+  --drawer-form-header-bg: #000000;
+}
+
+body[data-theme="light"] {
+  --drawer-form-header-bg: #f1f1f1;
+}
+
+.acc-creation-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.profileMain {
+  @include drawerScrollbar;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.profileHeader {
+  min-height: 96px;
+  background: var(--drawer-form-header-bg);
+}

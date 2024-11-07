@@ -1,0 +1,135 @@
+body[data-theme="dark"] {
+    .accounts-list-header {
+      --acc-header-bg: #1D1D1F;
+    }
+  
+    .btn {
+      &--autoreg {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+
+      &--check-proxy {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+
+      &--change-ip {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+
+      &--change-protocol {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+
+      &--buy-proxy {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+
+      &--create-proxy {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+  
+      &--farm {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+
+      &--upload {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+  
+      &--pass-to-profiles {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+  
+      &--pass-to-user {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+  
+      &--download {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+
+      &--tags {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+  
+      &--deleteIcon {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+    }
+  }
+  
+  body[data-theme="light"] {
+    .accounts-list-header {
+      --acc-header-bg: #FBFBFB;
+    }
+  
+    .btn {
+      &--autoreg {
+        --btn-color-bg-rgb: 242, 242, 242;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .85);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), 1.35);
+      }
+  
+      &--farm {
+        --btn-color-bg-rgb: 242, 202, 202;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .35);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+  
+      &--pass-to-profiles {
+        --btn-color-bg-rgb: 245, 223, 244;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .35);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+  
+      &--pass-to-user {
+        --btn-color-bg-rgb: 107, 255, 255;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .4);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+  
+      &--download {
+        --btn-color-bg-rgb: 205, 225, 245;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .35);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .55);
+      }
+
+      &--tags {
+        --btn-color-bg-rgb: 205, 225, 245;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .7);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .9);
+      }
+  
+      &--deleteIcon {
+        --btn-color-bg-rgb: 229, 155, 113;
+        --btn-color-bg: rgba(var(--btn-color-bg-rgb), .2);
+        --btn-color-bg-hover: rgba(var(--btn-color-bg-rgb), .3);
+      }
+    }
+  }

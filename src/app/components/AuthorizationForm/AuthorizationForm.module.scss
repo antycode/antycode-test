@@ -1,0 +1,70 @@
+.headerBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 23px;
+  border-radius: 6px 6px 0 0;
+  background: rgba(217, 217, 217, 0.10);
+}
+
+.headerBoxTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formTitle {
+  margin-top: 4px;
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 20px;
+  font-weight: 550;
+  letter-spacing: 0.4px;
+}
+
+.closeIcon {
+  cursor: pointer;
+}
+
+.customAuthorizationWrapper,
+.modalDialogChildrenWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #1E1E20;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+}
+
+.logoTitle {
+  font-family: 'Geometria', sans-serif;
+  font-size: 40.956px;
+  font-weight: 700;
+  letter-spacing: 0.41px;
+  text-transform: lowercase;
+}
+
+.langSwitcherContent {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-height: 800px) {
+  .customAuthorizationWrapper {
+    zoom: 90%;
+  }
+}
+
+@media (max-height: 700px) {
+  .customAuthorizationWrapper {
+    zoom: 82%;
+  }
+}

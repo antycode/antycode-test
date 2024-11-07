@@ -1,0 +1,111 @@
+.editProxy {
+  max-height: 0;
+  opacity: 0;
+  transition: all .3s ease;
+  flex-basis: content;
+}
+
+[data-proxy-active='true'].editProxy {
+  max-height: 100%;
+  margin-bottom: 10px;
+  opacity: 1;
+  z-index: 1;
+  transition: all .3s ease;
+}
+
+.editProxyHidden{
+  display: none;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid rgba(107, 255, 255, 0.4);
+  z-index: 5;
+  margin: 20px 0;
+}
+
+.wrapperProtocols {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.wrapperRound {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(107, 255, 255, 0.4);
+  border-radius: 6px;
+  height: 42px;
+  width: 100%;
+}
+
+.roundText {
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.13px;
+  color: var(--drawer-form-btn-text-color);
+}
+
+.roundTextActive {
+  font-weight: 700;
+  color: var(--drawer-form-btn-text-color-active);
+}
+
+.roundActive {
+  background: rgba(107, 255, 255, 0.1);
+  .roundText {
+    color: var(--drawer-form-btn-text-color-active);
+  }
+}
+
+.wrapperProxyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.rowInput {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.inputProxyCustom {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  border: 1px solid rgba(107, 255, 255, 0.4);
+  width: 100%;
+  padding: 0 16px;
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.buttonEditProxy {
+  text-align: center;
+  height: 34px;
+  width: 100px;
+  font-size: 12px;
+  font-weight: 400;
+  background: rgba(107, 255, 255, 0.4);
+  border-radius: 6px;
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}

@@ -1,0 +1,52 @@
+body[data-theme=dark] {
+  --titlebar-bg: #262628;
+  --titlebar-bg-hover: rgba(255, 255, 255, .07);
+  --titlebar-icon-color: rgba(255, 255, 255, .7);
+}
+
+body[data-theme=light] {
+  --titlebar-bg: #FBFBFB;
+  --titlebar-bg-hover: rgba(0, 0, 0, .08);
+  --titlebar-icon-color: #000;
+}
+
+.title-bar {
+  display: flex;
+  height: var(--title-bar-height);
+  background-color: var(--titlebar-bg);
+}
+
+.draggable {
+  flex-grow: 1;
+  -webkit-app-region: drag;
+}
+
+.actions {
+  display: flex;
+  align-items: stretch;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  border-radius: 0;
+  color: var(--titlebar-icon-color);
+
+  &:hover {
+    background-color: var(--titlebar-bg-hover);
+  }
+
+  &--menu {
+    width: 36px;
+  }
+
+  &--close {
+
+    &:hover {
+      background-color: red;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}

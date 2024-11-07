@@ -1,0 +1,69 @@
+body[data-theme="dark"] {
+    --drawer-form-text-bg: #ffffff;
+}
+
+body[data-theme="light"] {
+    --drawer-form-text-bg: #989898;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    //width: 444px;
+    //height: 60px;
+}
+
+.inputMainWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    //border-bottom: 0.6px solid var(--drawer-form-text-bg);
+}
+
+.inputDivider {
+    width: 1px;
+    height: 40px;
+    background-color: var(--drawer-form-text-bg);
+}
+
+.inputWrapperTitle,
+.inputWrapperChildren {
+    width: 100%;
+    min-width: 150px;
+    height: 100%;
+    //padding: 25px 9px 11px 8px;
+    color: var(--drawer-form-text-bg);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.13px;
+}
+
+.inputWrapperChildren {
+    //width: 343px;
+    //padding: 19px 0px 11px 19px;
+}
+
+.input {
+    height: 42px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    outline: none;
+    font-size: 14px;
+    color: var(--color-secondary);
+    border: 1px solid var(--input-border-clr);
+    background: var(--input-bg-focus-clr);
+}
+
+.input::placeholder {
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.inputTextBottom {
+    padding-top: 32px;
+}

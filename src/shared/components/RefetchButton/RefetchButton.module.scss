@@ -1,0 +1,18 @@
+.icon {
+  display: flex;
+  font-size: 12px;
+
+  &:global(.exit-active) {
+    animation: spin linear .8s;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

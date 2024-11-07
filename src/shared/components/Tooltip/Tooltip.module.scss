@@ -1,0 +1,26 @@
+[data-theme=dark] {
+  --tooltip-bg: #343436;
+}
+
+[data-theme=light] {
+  --tooltip-bg: #EFEFEF;
+}
+
+.tooltip {
+  padding: 8px 15px;
+  max-width: 180px;
+  border-radius: 6px;
+  background-color: var(--tooltip-bg);
+  font-size: 13px;
+  color: var(--color-secondary);
+}
+
+:global {
+  .tooltip-arrow {
+    fill: var(--tooltip-bg);
+  }
+}
+
+[data-radix-popper-content-wrapper] {
+  z-index: 202 !important;
+}

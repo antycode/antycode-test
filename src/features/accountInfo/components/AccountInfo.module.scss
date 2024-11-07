@@ -1,0 +1,37 @@
+.accountInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  min-height: 40px;
+  background: #313133;
+  position: relative;
+}
+
+
+.accountInfoContent {
+  display: flex;
+  gap: 80px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.text {
+  color: #959595;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.text2 {
+  color: #ffffff;
+}
+
+.span{
+  margin-right: 10px;
+}
+.indent{
+  display: block;
+  width: 139px;
+}

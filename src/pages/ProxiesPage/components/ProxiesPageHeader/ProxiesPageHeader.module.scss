@@ -1,0 +1,679 @@
+@import '../../../../shared/styles/PageHeader.theme.scss';
+
+body[data-theme=dark] {
+  --acc-header-bg: #1D1D1F;
+}
+
+body[data-theme=light] {
+  --acc-header-bg: #FBFBFB;
+}
+
+
+.autoreg-header {
+  gap: 13px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--acc-header-bg);
+  opacity: 1;
+  z-index: 11;
+  transition: opacity 0.1s ease 0s, margin-top 0.1s ease 0s;
+}
+
+.actions-left {
+  display: flex;
+  gap: 13px;
+
+}
+
+.actions-right {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.blockedButton {
+  background: rgba(var(--btn-color-bg-rgb), .4) !important;
+  cursor: default !important;
+  opacity: 0.5 !important;
+
+  &:hover {
+    background: rgba(var(--btn-color-bg-rgb), .4) !important;
+  }
+}
+
+.btnSidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: 1px solid #3E7777;
+
+  &:hover {
+    background: #3B3B3B;
+  }
+}
+
+.arrowDeg {
+  //transition: transform 0.2s ease;
+  transform: rotate(180deg);
+}
+
+.btnText {
+  padding: 2px 0 0 6.5px;
+}
+
+.btnTextWin {
+  padding: 0 0 0 6.5px;
+  margin-top: -1px;
+}
+
+.iconDelete {
+  margin-top: -1px;
+}
+
+.iconDeleteWin {
+  margin-top: 0;
+}
+
+.selectBtnText {
+  padding: 2px 0 0 0;
+}
+
+.selectBtnTextWin {
+  padding: 0;
+  margin-top: -1px;
+}
+
+[data-protocol-active=true] {
+  .listProtocols {
+    display: flex;
+  }
+  .selectBtn {
+    border-radius: 6px 6px 0 0;
+  }
+}
+
+.changeProtocol {
+  position: relative;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.selectBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  cursor: pointer;
+  padding: 0 13px 0 11px;
+  height: 34px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  border-radius: 6px;
+  background: rgba(107, 255, 255, .40);
+  z-index: 2;
+
+  span {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &:hover {
+    background: rgba(107, 255, 255, .55);
+  }
+}
+
+.listProtocols {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  width: 100%;
+  border: 1px solid #2C2E30;
+  background: #19191A;
+  box-shadow: 0 10px 15px 6px #1D1D1F;
+  padding: 6px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  z-index: 1;
+}
+
+.protocolItem {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+  padding: 7px 5px 5px 5px;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.50);
+
+  &:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, .1);
+  }
+}
+
+.btn {
+  color: var(--color-secondary);
+  background-color: var(--btn-color-bg);
+
+  &:hover {
+    background-color: var(--btn-color-bg-hover);
+  }
+
+  &--deleteIcon {
+    color: #ffffff;
+  }
+}
+
+.addProxyText {
+  padding: 1px 0 0 0;
+}
+
+.addProxyTextWin {
+  padding: 0;
+  margin: -2px 0 0 0;
+}
+
+.modalHeaderTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.modalHeaderTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  margin-top: 6px;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px 110px;
+}
+
+.modalContentImportCookies {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px;
+}
+
+.modalChangeTags {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px;
+  width: 780px;
+}
+
+.sendUserPopupContent {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 50px;
+}
+
+.errorValid {
+  font-size: 12px;
+  font-weight: 550;
+  color: red;
+  margin-top: 10px;
+}
+
+.inputsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.addUserNickname {
+  border-bottom: 1px solid rgba(95, 94, 94, 0.30);
+  padding: 25px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid rgba(95, 94, 94, 0.30);
+  background: #2A2A2A;
+  padding: 0 15px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.inputContent {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #393939;
+}
+
+.editUsersInput {
+  width: 100%;
+  border: none;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  padding: 10px 0;
+  color: #ffffff;
+  font-weight: 550;
+}
+
+.addUserInput {
+  width: 100%;
+  border: none;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  padding: 10px 0;
+}
+
+.approveContentModalWindow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.tariffErrorContent {
+  font-size: 17px;
+  font-weight: 550;
+  text-align: center;
+  padding: 30px;
+}
+
+.modalWindowContent {
+  display: flex;
+  gap: 15px;
+  padding: 40px;
+}
+
+.btnCancelModalWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding-top: 3px;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #3B3B3B;
+  }
+}
+
+.btnApproveModalWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 3px;
+  background: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.modalWindowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px 6px 0 0;
+  background: rgba(217, 217, 217, 0.10);
+  padding: 22px;
+}
+
+.modalWindowTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.closeBtn {
+  cursor: pointer;
+}
+
+.optionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 260px;
+  border-radius: 25px;
+  border: 1px solid #3B3B3B;
+  background: #1D1D1F;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  padding: 26px 30px 30px 30px;
+  flex-grow: 1;
+}
+
+.optionTitleWrapper {
+  border-bottom: 1px solid #3B3B3B;
+}
+
+.optionTitle {
+  color: rgba(255, 255, 255, 0.80);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 0 6px 14px 6px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  //padding: 20px 0 0 15px;
+  padding: 12% 0 13% 15px;
+}
+
+.listItem {
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+
+}
+
+.optionForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.optionInputsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 21px
+}
+
+.optionInputWrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid #3B3B3B;
+  background: #1D1D1F;
+  padding: 3px 5px 2px 17px;
+}
+
+.quantityLabel {
+  margin-top: 3px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.optionInput {
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  background: #1D1D1F;
+  margin-left: 7px;
+}
+
+.changeQuantityBtnsWrapper {
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.iconUp {
+  border-radius: 4px 4px 0 0;
+  background: rgba(217, 217, 217, 0.10);
+  cursor: pointer;
+}
+
+.iconDown {
+  border-radius: 0 0 4px 4px;
+  background: rgba(217, 217, 217, 0.10);
+  cursor: pointer;
+}
+
+.optionSubmitBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 550;
+  height: 34px;
+  margin-top: 8px;
+  border-radius: 6px;
+  background: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.geo {
+  font-weight: 400;
+}
+
+.changeGeo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.flag {
+  width: 20px;
+  height: 13px;
+}
+
+.selectGeo {
+  position: relative;
+}
+
+.selectValue {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 7px 4px 17px;
+  border: 1px solid #3B3B3B;
+  border-radius: 6px;
+  background-color: #1D1D1F;
+}
+
+.selectValueActive {
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+}
+
+.selectArrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.selectOptions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #3B3B3B;
+  font-weight: 400;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background-color: #1D1D1F;
+  box-shadow: 0 5px 15px 6px #1d1d1f;
+  z-index: 1;
+}
+
+.selectOption {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 255, 255, .1)
+  }
+}
+
+.selectOption.selected {
+  background: rgba(255, 255, 255, .07);
+}
+
+.rotatedSelectArrow {
+  transform: rotate(180deg);
+}
+
+.modalDeleteHeaderTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.modalDeleteTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  margin-top: 6px;
+}
+
+.modalDeleteContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px 110px;
+}
+
+.errorProxiesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.errorProxiesUl {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.warningTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.warningText1 {
+  color: #ffffff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 20px;
+}
+
+.warningText2 {
+  color: rgba(255, 255, 255, 0.40);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.approveDeleteContent {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btnCancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding-top: 3px;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #3B3B3B;
+  }
+}
+
+.btnDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 3px;
+  background: rgba(124, 76, 74, 0.60);
+
+  &:hover {
+    background: rgba(124, 76, 74, 0.75);
+  }
+}
+
+ul {
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}

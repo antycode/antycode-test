@@ -1,0 +1,15 @@
+@import '/src/shared/styles/mixins.global.scss';
+.content {
+  @include scrollbar;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 17px 13px 0 15px;
+  overflow: auto;
+}
+
+.footer {
+  height: 66px;
+  flex-shrink: 0;
+  background: rgba(217, 217, 217, 0.1);
+}

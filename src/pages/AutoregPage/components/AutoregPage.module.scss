@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 17px 13px 0 15px;
+  overflow: hidden;
+}
+
+.info{
+  justify-content: center !important;
+}
+
+.footer {
+  height: 66px;
+  flex-shrink: 0;
+  background: rgba(217, 217, 217, 0.1);
+}

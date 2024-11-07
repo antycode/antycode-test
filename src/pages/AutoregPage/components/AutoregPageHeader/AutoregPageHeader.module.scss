@@ -1,0 +1,44 @@
+@import '../../../../shared/styles/PageHeader.theme.scss';
+
+body[data-theme=dark] {
+  --acc-header-bg: #1D1D1F;
+}
+
+body[data-theme=light] {
+  --acc-header-bg: #FBFBFB;
+}
+
+.autoreg-header {
+  gap: 13px 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--acc-header-bg);
+}
+
+.actions-left {
+  display: flex;
+  gap: 13px;
+
+}
+
+.actions-right {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  color: var(--color-secondary);
+  background-color: var(--btn-color-bg);
+
+  &:hover {
+    background-color: var(--btn-color-bg-hover);
+  }
+
+  &--deleteIcon {
+    color: #ffffff;
+  }
+}

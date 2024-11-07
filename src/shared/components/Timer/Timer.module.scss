@@ -1,0 +1,22 @@
+.loaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 14;
+  background: rgba(30, 30, 32, 0.8);
+}
+
+.loader {
+  color: var(--color-secondary);
+
+  &--light {
+    color: #fff;
+  }
+
+  &--dark {
+    color: #545454;
+  }
+}

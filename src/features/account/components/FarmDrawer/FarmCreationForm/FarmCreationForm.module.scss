@@ -1,0 +1,194 @@
+@import "/src/shared/styles/mixins.global.scss";
+
+body[data-theme="dark"] .form {
+  --drawer-form-input-border: #545454;
+  --drawer-form-btn-farm-bg: rgba(217, 217, 217, 0.2);
+  --drawer-form-btn-farm-border: rgba(255, 255, 255, 0.4);
+}
+
+body[data-theme="light"] .form {
+  --drawer-form-input-border: #cacaca;
+  --drawer-form-btn-farm-bg: #f4f4f4;
+  --drawer-form-btn-farm-border: #cacaca;
+}
+
+.form {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-grow: 1;
+  padding: 30px 10px 30px 27px;
+}
+
+.form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.field {
+  display: flex;
+  width: 40%;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  transform: translateY(-2px);
+  padding: 0 35px 0 6px;
+  width: 250px;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 550;
+  letter-spacing: 0.01em;
+  white-space: pre-line;
+  color: var(--color-secondary);
+}
+
+.controls {
+  display: flex;
+  width: 445px;
+  gap: 39px;
+}
+
+.labelBackImage {
+  padding: 0 25px 0 6px;
+}
+
+.wrapperImageInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 444px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 0.6px solid var(--drawer-form-input-border);
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+.text {
+  font-size: 13px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 82px;
+  height: 29px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 1px solid var(--drawer-form-btn-farm-border);
+  background: var(--drawer-form-btn-farm-bg);
+  div {
+    margin-top: 2px;
+  }
+}
+
+.mainTitle {
+  display: flex;
+  align-items: center;
+  padding-left: 26px;
+  width: 100%;
+  height: 63px;
+  border-radius: 6px;
+  background: rgba(107, 255, 255, 0.40);
+
+  font-size: 19px;
+  font-weight: 550;
+  line-height: normal;
+}
+
+.farmCreationFooter {
+  display: flex;
+  align-items: center;
+  background: #282828;
+  height: 67px;
+  width: 100%;
+  padding: 0 27px;
+}
+
+.farmCreationFooterContent {
+  width: 50%;
+  display: flex;
+  gap: 15px;
+}
+
+.btnCancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.80);
+  border: 1px solid rgba(217, 217, 217, 0.20);
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #3B3B3B;
+  }
+}
+
+.btnRun{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.80);
+  border-radius: 6px;
+  background: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.btnText {
+  padding: 4px 0 0 0;
+}
+
+@media (max-width: 1550px) {
+  .farmCreationFooter {
+    height: 67px;
+  }
+}
+
+@media (max-width: 1480px) {
+  .farmCreationFooter {
+    height: 66px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .farmCreationFooter {
+    height: 66px;
+  }
+}
+
+@media (max-width: 1415px) {
+  .farmCreationFooter {
+    height: 67px;
+  }
+}
+
+@media (max-width: 1375px) {
+  .farmCreationFooter {
+    height: 66px;
+  }
+}

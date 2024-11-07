@@ -1,0 +1,200 @@
+body[data-theme='dark'] {
+  --icon-header-filter-color: brightness(300%) contrast(100%);
+}
+
+body[data-theme='light'] {
+  --icon-header-filter-color: brightness(30%) contrast(100%);
+}
+
+.col {
+  &-check {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 50px;
+    flex: 50 0 auto;
+    max-width: 50px;
+  }
+
+  &-geo {
+    font-weight: 500;
+    width: 83px;
+    flex: 83 0 auto;
+  }
+  &-name {
+    font-weight: 500;
+    width: 351px;
+    flex: 351 0 auto;
+  }
+
+  &-register {
+    justify-content: center;
+    width: 128px;
+    flex: 128 0 auto;
+  }
+
+  &-fp {
+    width: 128px;
+    flex: 128 0 auto;
+    justify-content: center;
+  }
+  &-token {
+    width: 128px;
+    flex: 128 0 auto;
+    justify-content: center;
+  }
+
+  &-policy {
+    justify-content: center;
+    width: 128px;
+    flex: 128 0 auto;
+  }
+
+  &-zrd {
+    justify-content: center; // FIXME remove after adding functionality
+    width: 128px;
+    flex: 128 0 auto;
+    & p {
+      font-weight: 300;
+    }
+  }
+  &-bm {
+    justify-content: center; // FIXME remove after adding functionality
+    width: 83px;
+    flex: 83 0 auto;
+  }
+  &-farm {
+    justify-content: center; // FIXME remove after adding functionality
+    width: 64px;
+    flex: 64 0 auto;
+  }
+  &-download {
+    justify-content: center; // FIXME remove after adding functionality
+    width: 70px;
+    flex: 70 0 auto;
+  }
+  &-share {
+    justify-content: center; // FIXME remove after adding functionality
+    width: 131px;
+    flex: 131 0 auto;
+  }
+
+  &-date {
+    justify-content: center;
+    width: 215px;
+    flex: 215 0 auto;
+
+    &-divider {
+      opacity: 0.5;
+    }
+  }
+
+  &-action {
+    justify-content: center;
+    //padding: 0 18px;
+    width: 150px;
+    flex: 0 0 auto;
+  }
+}
+
+.geoWrapper{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.load-more-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &-icon {
+    transform: rotate(90deg);
+    margin-left: 10px;
+  }
+}
+
+.searchWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputAccount {
+  height: 100%;
+  max-width: 125px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  outline: none;
+  font-size: 13px;
+  color: var(--color-secondary);
+  border: 1px solid var(--input-border-clr);
+  background: var(--input-bg-focus-clr);
+}
+
+.inputAccount::placeholder {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.filterIcon,
+.filterSortIcon {
+  min-width: 13px;
+  min-height: 13px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  &:hover {
+    filter: var(--icon-header-filter-color);
+  }
+}
+
+.filterSortIcon {
+  margin-left: 10px;
+}
+
+.tableMainWrapper {
+  border-radius: 0 0 10px 10px;
+  //overflow: hidden;
+}
+.geoContent{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+  & p {
+    font-weight: 300;
+  }
+}
+
+.btnDownload, .btnShare {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 6px;
+  width: 100%;
+  background-color: rgba(107, 255, 255, .4) !important;
+
+  &:hover {
+    background-color: rgba(107, 255, 255, .55) !important;
+  }
+
+}

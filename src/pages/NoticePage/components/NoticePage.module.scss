@@ -1,0 +1,572 @@
+.changeTeamPageActive {
+  color: #ffffff !important;
+  padding: 27px 0 !important;
+  border-bottom: 1px solid #6E6E6E !important;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 17px 13px 0 15px;
+  overflow: hidden;
+}
+
+.header {
+  min-height: 72px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 1px solid #292929;
+  background: #1F1D1D;
+}
+
+.headerContent {
+  display: flex;
+  gap: 30px;
+  padding: 0 27px;
+  background-color: #1d1d1f;
+  border-radius: 10px 10px 0 0;
+}
+
+.changeTeamPage {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  //transition: all 200ms ease 0s;
+  color: #6E6E6E;
+  border-bottom: 1px dashed #6E6E6E;
+}
+
+.changeNoticePage {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  //transition: all 200ms ease 0s;
+  color: #6E6E6E;
+  border-bottom: 1px dashed #6E6E6E;
+}
+
+.contentTeam {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.footer {
+  height: 45px;
+  flex-shrink: 0;
+  background: rgba(217, 217, 217, 0.1);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #1F1D1D;
+}
+
+.teamName {
+  text-align: center;
+  padding: 27px 0 19px 0;
+}
+
+.teamTitle {
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.teamBackground {
+  height: 200px;
+  overflow: hidden;
+}
+
+.teamImg {
+  height: 200px;
+}
+
+.teamOwner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+}
+
+.teamOwnerAva {
+  position: relative;
+  z-index: 1;
+  margin-top: -96px;
+}
+
+.avatarRadius {
+  border-radius: 50%;
+}
+
+.ownerInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ownerNick {
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.editOwnerTeamBtns {
+  display: flex;
+  gap: 20px;
+}
+
+.verticalsTitle {
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.verticalsList {
+  display: flex;
+}
+
+.verticals {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.editOwnerBtn {
+  display: flex;
+  gap: 10px;
+  border-radius: 30px;
+  border: 1px solid rgba(95, 94, 94, 0.20);
+  background: #2A2A2A;
+  padding: 10px 15px;
+}
+
+.modalWindowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px 6px 0 0;
+  background: rgba(217, 217, 217, 0.10);
+  padding: 22px;
+}
+
+.modalWindowTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.closeBtn {
+  cursor: pointer;
+}
+
+.modalDeleteHeaderTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.addUserContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.editProfileContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.editProfileContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rowField {
+  display: flex;
+  gap: 15px;
+}
+
+.importFileContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.importFileBtn {
+  border-radius: 30px;
+  background: rgba(107, 255, 255, 0.10);
+  padding: 7px 10px 5px 10px;
+  font-size: 13px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  transform: translateY(-2px);
+  padding: 0 10px 0 6px;
+  width: 171px;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 550;
+  letter-spacing: 0.01em;
+  white-space: pre-line;
+  color: var(--color-secondary);
+}
+
+.editProfileBtnWrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+
+.editProfileBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(107, 255, 255, 0.4);
+  font-size: 16px;
+  font-weight: 550;
+  color: #fff;
+  padding: 11px 15px 10px 15px;
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.modalDeleteTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  margin-top: 6px;
+}
+
+.modalDeleteContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px 110px;
+}
+
+.btnCancelDeleteToken {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding-top: 2px;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #3B3B3B;
+  }
+}
+
+.btnDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 3px;
+  background: rgba(124, 76, 74, 0.60);
+
+  &:hover {
+    background: rgba(124, 76, 74, 0.75);
+  }
+}
+
+.warningTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.warningText1 {
+  color: #ffffff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 20px;
+}
+
+.warningText2 {
+  color: rgba(255, 255, 255, 0.40);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.approveDeleteContent {
+  display: flex;
+  gap: 10px;
+}
+
+.btnApprove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 47px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  color: #ffffff;
+  border-radius: 6px;
+  padding-top: 2px;
+  background: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}
+
+.approveContent {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.approveContentModalWindow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.approveContentModalWindowProxies {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 60px;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+}
+
+.modalContentImportCookies {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px;
+}
+
+.modalFormInput {
+  border: 1px solid rgba(107, 255, 255, 0.40);
+  border-radius: 6px;
+  padding: 0 12px;
+  height: 42px;
+  background: none;
+}
+
+.formInput::placeholder {
+  color: var(--color-secondary);
+  opacity: 0.3;
+  font-weight: 400;
+}
+
+.findUserWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid rgba(95, 94, 94, 0.30);
+  background: #2A2A2A;
+  padding: 0 15px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.addUserNickname {
+  border-bottom: 1px solid rgba(95, 94, 94, 0.30);
+  padding: 25px;
+}
+
+.addUserWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid rgba(95, 94, 94, 0.30);
+  background: #2A2A2A;
+  padding: 0 15px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.editProfileWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid rgba(95, 94, 94, 0.30);
+  background: #2A2A2A;
+  padding: 0 15px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.selectItems {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.selectItem {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+
+  &:hover {
+    background: rgba(255, 255, 255, .1);
+  }
+}
+
+.checkboxSelected {
+  margin-right: -2px;
+}
+
+.addUserInput {
+  width: 100%;
+  border: none;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  padding: 10px 0;
+}
+
+.findUserInput {
+  width: 100%;
+  border: none;
+  background: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.transfer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px 26px 42px;
+}
+
+.transferText {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.transferItem {
+  display: flex;
+  align-items: center;
+  gap: 182px;
+  justify-content: space-between;
+  border-bottom: 1px solid #393939;
+  padding: 37px 0;
+}
+
+.dropdownList {
+  display: flex;
+  flex-direction: column;
+  background: #2A2A2A;
+  border: 1px solid #393939;
+  border-radius: 0 0 6px 6px;
+}
+
+.dropdownItem {
+  cursor: pointer;
+  padding: 10px 20px;
+
+  &:hover {
+    background: #3B3B3B;
+  }
+}
+
+.addUserBtnWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 25px 50px 0;
+}
+
+.dropdownMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 442px;
+  height: 34px;
+  border-radius: 30px;
+  padding: 0 17px;
+  border: 1px solid rgba(95, 94, 94, 0.30);
+  background: #2A2A2A;
+}
+
+.dropdownActive {
+  border-radius: 30px 30px 0 0;
+}
+
+.addUserBtn {
+  display: flex;
+  gap: 5px;
+  border-radius: 30px;
+  background: #3E7777;
+  padding: 12px 45px 11px 45px;
+
+  &:hover {
+    background: rgba(107, 255, 255, 0.55);
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "Field is required": "该字段是必填项",
+  "Value must be in the range: {{min}}–{{max}}": "值必须在此范围内：{{min}}–{{max}}"
+}

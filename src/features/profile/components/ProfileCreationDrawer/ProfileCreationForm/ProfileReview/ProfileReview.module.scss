@@ -1,0 +1,117 @@
+.review {
+  background: #1D1D1F;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 13px 0 13px;
+
+  //position: fixed;
+  left: 74.7%;
+  height: 100%;
+  width: 25%;
+}
+
+.reviewItemOsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reviewItemDataOs {
+  margin-top: 2px;
+}
+
+.reviewItemDataOsWin {
+  margin-top: 0 !important;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 6px;
+  font-weight: 400;
+  max-width: 100%;
+  color: var(--color-secondary);
+  background-color: rgba(107, 255, 255, 0.40);
+
+  &:hover {
+    background-color: rgba(107, 255, 255, 0.55);
+  }
+
+  & span {
+    display: flex;
+    align-content: center;
+    gap: 5px;
+  }
+
+  &--deleteIcon {
+    color: #ffffff;
+  }
+}
+
+.reviewItem {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #3B3B3B;
+  padding: 12px 14px 8px 14px;
+}
+
+.reviewItemTitle {
+  color: rgba(255, 255, 255, 0.40);
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.reviewItemData {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  flex-wrap: wrap;
+}
+
+.reviewItemDataWebglInfo {
+  max-width: 160px;
+}
+
+.reviewItemDataTimezone {
+  display: flex;
+  gap: 5px;
+}
+
+.reviewItemDataTagsUniq {
+  display: flex;
+  gap: 5px;
+  margin-left: 23px;
+}
+
+.tagItemWrapper {
+  display: flex;
+  gap: 8px;
+  border-radius: 12px;
+  background: rgba(107, 255, 255, 0.10);
+  padding: 6px 7px;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  margin-bottom: 10px;
+  padding-left: 14px;
+}

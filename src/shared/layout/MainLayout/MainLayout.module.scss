@@ -1,0 +1,42 @@
+.main-layout {
+  display: flex;
+  margin: 0;
+  min-width: 320px;
+  height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  overflow: auto;
+  
+}
+
+.mainProfileLayout{
+  height: calc(100% - 40px);
+}
+
+@media (max-width: 1550px) {
+  .main-layout {
+    zoom: 95%;
+  }
+}
+@media (max-width: 1480px) {
+  .main-layout {
+    zoom: 92%;
+  }
+}
+@media (max-width: 1440px) {
+  .main-layout {
+    zoom: 89%;
+  }
+}
+@media (max-width: 1415px) {
+  .main-layout {
+    zoom: 86%;
+  }
+}
+@media (max-width: 1375px) {
+  .main-layout {
+    zoom: 82.5%;
+  }
+}

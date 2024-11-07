@@ -1,0 +1,7 @@
+.drawer-body {
+  display: flex;
+  min-width: 716px;
+  flex-grow: 1;
+  background-color: var(--drawer-bg-body);
+  // box-shadow: 0px 0px 100px 30px rgba(0, 0, 0, 0.3);
+}

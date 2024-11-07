@@ -1,0 +1,89 @@
+.review {
+  background: #1D1D1F;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 13px 0 13px;
+
+  //position: fixed;
+  left: 74.7%;
+  height: 100%;
+  width: 25%;
+}
+
+.reviewItemOsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reviewItemDataOs {
+  margin-top: 2px;
+}
+
+.reviewItemDataOsWin {
+  margin-top: 0 !important;
+}
+
+.reviewItem {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #3B3B3B;
+  padding: 12px 14px 8px 14px;
+}
+
+.tagItemWrapper {
+  display: flex;
+  gap: 8px;
+  border-radius: 12px;
+  background: rgba(107, 255, 255, 0.10);
+  padding: 6px 7px;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.reviewItemTitle {
+  color: rgba(255, 255, 255, 0.40);
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.reviewItemData {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  flex-wrap: wrap;
+}
+
+.reviewItemDataWebglInfo {
+  max-width: 160px;
+}
+
+.reviewItemDataTimezone {
+  display: flex;
+  gap: 5px;
+}
+
+.reviewItemDataTagsUniq {
+  display: flex;
+  gap: 5px;
+  margin-left: 23px;
+}
+
+.title {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  margin-bottom: 10px;
+  padding-left: 14px;
+}
