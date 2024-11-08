@@ -1,6 +1,6 @@
 {
   "name": "antycode-test",
-  "version": "1.0.13",
+  "version": "1.0.21",
   "main": "dist-electron/main/index.js",
   "description": "The best anty-detect browser",
   "author": "noname digital",

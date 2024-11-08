@@ -1,6 +1,6 @@
 const LoadingPage = ({ progress, statusMessage, updateAvailable }: any) => {
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
+    <div style={{ textAlign: 'center', padding: '20px', margin: '20% 0' }}>
       <h1 style={{fontSize: "34px"}}>{statusMessage}</h1>
       {updateAvailable && (
         <>

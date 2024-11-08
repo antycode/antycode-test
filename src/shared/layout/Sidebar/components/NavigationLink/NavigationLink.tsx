@@ -18,6 +18,7 @@ const allowedRoutes: any = [
   AppRoutes.TEAM,
   AppRoutes.NOTICE,
   AppRoutes.Extension,
+  AppRoutes.LoadingUpdate,
 ]; //FIXME remove any
 
 interface NavigationLinkProps {

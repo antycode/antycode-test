@@ -21,14 +21,13 @@ const useApplicationUpdate = () => {
     });
 
     ipcRenderer.on('update-available', (_, info) => {
-      navigate(AppRoutes.LoadingUpdate);
       setStatusMessage(`Загрузка обновления: версия ${info.version}`);
       console.log('Загрузка обновления')
       setUpdateAvailable(true);
     });
 
     ipcRenderer.on('update-not-available', () => {
-      navigate('/');
+      
     });
 
     ipcRenderer.on('update-progress', (_, percent) => {
@@ -40,7 +39,6 @@ const useApplicationUpdate = () => {
         error.message.includes('Cannot find latest.yml') ||
         error.message.includes('Cannot find latest-mac.yml')
       ) {
-        navigate('/');
       } else {
         setStatusMessage('Произошла ошибка при загрузке обновления.');
       }
