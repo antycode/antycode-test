@@ -10,12 +10,9 @@ import { TeamPage } from "@/pages/TeamPage";
 import { NoticePage } from "@/pages/NoticePage";
 import { ExtensionPage } from '@/pages/ExtensionPage';
 import LoadingPage from '@/pages/LoadingPage';
-import useApplicationUpdate from '@/shared/hooks/useApplicationUpdate';
+
 
 export const routerConfig = () => {
-  // Вызов хука вне конфигурации маршрутов
-  const { progress, statusMessage, updateAvailable } = useApplicationUpdate();
-
   <MainLayout>
     <Routes>
       <Route path={AppRoutes.MAIN} element={<ProfilesPage />} />
@@ -26,7 +23,6 @@ export const routerConfig = () => {
       <Route path={AppRoutes.TEAM} element={<TeamPage />} />
       <Route path={AppRoutes.NOTICE} element={<NoticePage />} />
       <Route path={AppRoutes.Extension} element={<ExtensionPage />} />
-      <Route path={AppRoutes.LoadingUpdate} element={<LoadingPage progress={progress} statusMessage={statusMessage} updateAvailable={updateAvailable} />} />
       <Route path="*" element={<Navigate to="." />} />
     </Routes>
   </MainLayout>

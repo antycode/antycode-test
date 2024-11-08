@@ -15,7 +15,6 @@ import useApplicationUpdate from '@/shared/hooks/useApplicationUpdate';
 
 export const AppRouter = () => {
   // Вызов хука для получения состояния обновления
-  const { progress, statusMessage, updateAvailable } = useApplicationUpdate();
 
   return (
     <MainLayout>
@@ -28,10 +27,6 @@ export const AppRouter = () => {
         <Route path={AppRoutes.TEAM} element={<TeamPage />} />
         <Route path={AppRoutes.NOTICE} element={<NoticePage />} />
         <Route path={AppRoutes.Extension} element={<ExtensionPage />} />
-        <Route
-          path={AppRoutes.LoadingUpdate}
-          element={<LoadingPage progress={progress} statusMessage={statusMessage} updateAvailable={updateAvailable} />}
-        />
         <Route path="*" element={<Navigate to={AppRoutes.MAIN} />} />
       </Routes>
     </MainLayout>

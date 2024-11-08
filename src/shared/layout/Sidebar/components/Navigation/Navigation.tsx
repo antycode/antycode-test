@@ -121,7 +121,7 @@ export const Navigation = (props: NavigationProps) => {
             items: replaceIconForNullPath([
               {
                 text: t('Support'),
-                to: '/null',
+                to: AppRoutes.LoadingUpdate,
                 icon: <SupportIcon />,
               },
             ]),
