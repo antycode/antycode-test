@@ -6,5 +6,6 @@ export enum AppRoutes {
   TRASH = '/trash',
   TEAM = '/team',
   NOTICE = '/notice',
-  Extension = '/extension'
+  Extension = '/extension',
+  LoadingUpdate = '/update'
 }

@@ -32,6 +32,7 @@ import {FoldersModeContext, FoldersModeContextType} from "@/shared/context/Folde
 import { useExtensionsStore } from '@/features/account/components/ExtensionList/store';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LoadingPage from '@/pages/LoadingPage';
 
 function App() {
     const {setProfilesAllData, setProfilesConfigData, setFolders, profilesAll} = useProfilesStore();

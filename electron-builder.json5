@@ -2,7 +2,7 @@
  * @see https://www.electron.build/configuration/configuration
  */
 {
-  appId: 'com.anty-code.browser',
+  appId: 'com.antycode-test.browser',
   asar: true,
   directories: {
     output: 'release/${version}',
@@ -85,9 +85,12 @@
     allowToChangeInstallationDirectory: true,
     deleteAppDataOnUninstall: false,
   },
-  publish: {
-    provider: 'generic',
-    channel: 'latest',
-    url: 'https://github.com/electron-vite/electron-vite-react/releases/download/v0.9.9/',
-  },
+  publish: [
+    {
+      "provider": "github",
+      "owner": "antycode",
+      "repo": "antycode-test",
+      "releaseType": "release",
+    }
+  ],
 }

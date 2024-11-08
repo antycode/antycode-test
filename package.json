@@ -1,6 +1,6 @@
 {
-  "name": "anty-code",
-  "version": "1.0.84",
+  "name": "antycode-test",
+  "version": "1.0.7",
   "main": "dist-electron/main/index.js",
   "description": "The best anty-detect browser",
   "author": "noname digital",
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && electron-builder",
+    "build": "tsc && vite build && electron-builder -p always",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -26,6 +26,7 @@
     "cheerio": "^1.0.0",
     "clsx": "^1.2.1",
     "dotenv": "^16.3.1",
+    "electron-log": "^5.2.2",
     "electron-updater": "^5.3.0",
     "firebase": "^9.22.1",
     "https-proxy-agent": "^7.0.2",
