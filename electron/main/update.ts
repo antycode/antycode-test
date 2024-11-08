@@ -15,25 +15,11 @@ export function startUpdate (win: BrowserWindow, log?:any) {
     win.webContents.send('update-progress', progressTrack.percent);
   });
   
-  autoUpdater.on('update-available', async (info) => {
+  autoUpdater.on('update-available', (info) => {
     log.info('update-available', info)
-    const { response } = await dialog.showMessageBox(win, {
-      type: 'info',
-      buttons: ['Да', 'Нет'],
-      defaultId: 0,
-      cancelId: 1,
-      title: 'Доступно обновление',
-      message: `Новая версия ${info.version} доступна. Хотите скачать и установить её?`,
-    })
-
-    // Если пользователь согласен, начинаем загрузку обновления
-    if (response === 0) {  // Нажата кнопка "Да"
-      autoUpdater.downloadUpdate()
-      win.webContents.send('download-started')
-    } else {
-      win.webContents.send('update-declined')
-    }
-  })
+    win.webContents.send('update-available', info);
+  });
+  
   autoUpdater.on('error', async (error) => {
      await dialog.showMessageBox(win, {
       type: 'info',
