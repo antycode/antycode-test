@@ -5,7 +5,9 @@ import { HashRouter } from 'react-router-dom';
 import './shared/config/i18n/i18n';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <AppProvider>
+    <HashRouter>
       <App />
+    </HashRouter>
   </AppProvider>,
 );
 

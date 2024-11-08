@@ -1,4 +1,4 @@
-import { Navigate, Outlet, createBrowserRouter, useLocation } from 'react-router-dom';
+import { Navigate, Outlet, Route, Routes, createBrowserRouter, useLocation } from 'react-router-dom';
 import { AutoregPage } from '@/pages/AutoregPage';
 import { ProfilesPage } from '@/pages/ProfilesPage';
 import { ProxiesPage } from '@/pages/ProxiesPage';
@@ -16,26 +16,18 @@ export const routerConfig = () => {
   // Вызов хука вне конфигурации маршрутов
   const { progress, statusMessage, updateAvailable } = useApplicationUpdate();
 
-  return createBrowserRouter([
-    {
-      path: AppRoutes.MAIN,
-      element: (
-        <MainLayout>
-          <Outlet />
-        </MainLayout>
-      ),
-      children: [
-        { path: AppRoutes.MAIN, element: <ProfilesPage /> },
-        { path: AppRoutes.AUTOREG, element: <AutoregPage /> },
-        { path: AppRoutes.PROXIES, element: <ProxiesPage /> },
-        { path: AppRoutes.PAYMENT, element: <PaymentPage /> },
-        { path: AppRoutes.TRASH, element: <TrashPage /> },
-        { path: AppRoutes.TEAM, element: <TeamPage /> },
-        { path: AppRoutes.NOTICE, element: <NoticePage /> },
-        { path: AppRoutes.Extension, element: <ExtensionPage /> },
-        { path: AppRoutes.LoadingUpdate, element: <LoadingPage progress={progress} statusMessage={statusMessage} updateAvailable={updateAvailable} /> },
-        { path: '*', element: <Navigate to="." /> },
-      ],
-    },
-  ]);
+  <MainLayout>
+    <Routes>
+      <Route path={AppRoutes.MAIN} element={<ProfilesPage />} />
+      <Route path={AppRoutes.AUTOREG} element={<AutoregPage />} />
+      <Route path={AppRoutes.PROXIES} element={<ProxiesPage />} />
+      <Route path={AppRoutes.PAYMENT} element={<PaymentPage />} />
+      <Route path={AppRoutes.TRASH} element={<TrashPage />} />
+      <Route path={AppRoutes.TEAM} element={<TeamPage />} />
+      <Route path={AppRoutes.NOTICE} element={<NoticePage />} />
+      <Route path={AppRoutes.Extension} element={<ExtensionPage />} />
+      <Route path={AppRoutes.LoadingUpdate} element={<LoadingPage progress={progress} statusMessage={statusMessage} updateAvailable={updateAvailable} />} />
+      <Route path="*" element={<Navigate to="." />} />
+    </Routes>
+  </MainLayout>
 };
