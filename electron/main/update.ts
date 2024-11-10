@@ -1,5 +1,10 @@
 import { BrowserWindow, dialog } from 'electron';
 import { autoUpdater } from 'electron-updater'; 
+import dotenv from "dotenv";
+
+dotenv.config()
+
+const GH_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
 
 interface CustomGithubOptions {
   provider: 'github';
@@ -8,9 +13,9 @@ interface CustomGithubOptions {
   token: string;
 }
 
-export function startUpdate(win: BrowserWindow, log?: any, token?: string) {
-  if (!token) {
-    log?.info('Token для обновлений отсутствует.');
+export function startUpdate(win: BrowserWindow, log?: any) {
+  if (!GH_TOKEN) {
+    log?.info('GH_TOKEN is empty');
     return;
   }
 
@@ -18,10 +23,10 @@ export function startUpdate(win: BrowserWindow, log?: any, token?: string) {
     provider: 'github',
     owner: 'antycode',
     repo: 'antycode-test',
-    token: token,
+    token: GH_TOKEN,
   };
 
-  autoUpdater.setFeedURL(updateConfig as any);
+  autoUpdater.setFeedURL(updateConfig);
 
   autoUpdater.on('checking-for-update', () => {
     log.info('checking-for-update')
