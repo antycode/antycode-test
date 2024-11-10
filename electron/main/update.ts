@@ -1,7 +1,28 @@
 import { BrowserWindow, dialog } from 'electron';
 import { autoUpdater } from 'electron-updater'; 
 
-export function startUpdate (win: BrowserWindow, log?:any) {
+interface CustomGithubOptions {
+  provider: 'github';
+  owner: string;
+  repo: string;
+  token: string;
+}
+
+export function startUpdate(win: BrowserWindow, log?: any, token?: string) {
+  if (!token) {
+    log?.info('Token для обновлений отсутствует.');
+    return;
+  }
+
+  const updateConfig: CustomGithubOptions = {
+    provider: 'github',
+    owner: 'antycode',
+    repo: 'antycode-test',
+    token: token,
+  };
+
+  autoUpdater.setFeedURL(updateConfig as any);
+
   autoUpdater.on('checking-for-update', () => {
     log.info('checking-for-update')
     win.webContents.send('checking-for-update');
