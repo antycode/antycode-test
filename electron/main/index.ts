@@ -1,6 +1,5 @@
 import { app, BrowserWindow, shell, ipcMain, dialog, IpcMainInvokeEvent } from 'electron';
 import process from 'process';
-import dotenv from "dotenv";
 import { release } from 'node:os';
 import { join } from 'node:path';
 import { execFile } from 'child_process';
@@ -21,7 +20,6 @@ const fs = require('fs');
 const fsp = require('fs').promises;
 const path = require('path');
 
-dotenv.config()
 log.transports.file.resolvePathFn = () => path.join('D:\Job\It\Electron\zzaghaev-core-1611d2a40805', 'logs/main.log');
 
 // The built directory structure
@@ -79,7 +77,6 @@ import { useExtensionsStore } from '@/features/account/components/ExtensionList/
 import { startUpdate } from './update';
 
 const url = process.env.VITE_DEV_SERVER_URL;
-const GhToken = import.meta.env.VITE_GITHUB_TOKEN;
 const indexHtml = join(process.env.DIST, 'index.html');
 let storage: any;
 let bucket: any;
@@ -119,7 +116,7 @@ async function createWindow() {
     win.webContents.openDevTools();
   } else {
     win.loadFile(indexHtml);
-    startUpdate(win, log, GhToken);
+    startUpdate(win, log);
     win.webContents.openDevTools();
   }
 
