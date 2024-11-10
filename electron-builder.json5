@@ -85,12 +85,13 @@
     allowToChangeInstallationDirectory: true,
     deleteAppDataOnUninstall: false,
   },
-  publish: [
+  "publish": [
     {
       "provider": "github",
+      "private": true,
       "owner": "antycode",
       "repo": "antycode-test",
-      "releaseType": "release",
+      "releaseType": "release"
     }
-  ],
+  ]
 }

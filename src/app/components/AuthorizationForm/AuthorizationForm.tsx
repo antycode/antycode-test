@@ -81,7 +81,7 @@ export const AuthorizationForm: React.FC<AuthorizationFormProps> = ({
                 <div className={cls.modalDialogChildrenWrapper}>
                     <div className={cls.logo}>
                         <AntyCodeIcon />
-                        <p className={cls.logoTitle}>Anty-code V1.0.8</p>
+                        <p className={cls.logoTitle}>Anty-code V1.0.27</p>
                     </div>
                     {componentToRender as JSX.Element}
                 </div>
